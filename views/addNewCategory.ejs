@@ -1,0 +1,36 @@
+<%- include('header') %>
+
+    <div class="container my-3">
+        <!-- <div class="row"> -->
+        <div id="signupbox" class="card" style="min-width: 68rem; border-radius: 8px 8px 25px 25px;border: 2px solid rgba(10, 29, 197, 0.979);">
+            <div class="card-header bg-primary text-white ">Add New Password Category</div>
+            <form action="/add-new-category" id="EmployeeForm" class="form-horizontal my-3 mx-3" method="POST" role="form">
+
+                <div class="form-group ">
+                    <% if(errors != ''){ %>
+                        <p style="text-align: center; color: red;">
+                            <%= errors.passwordCategory.msg %>
+                        </p>
+                        <% } %>
+
+                            <% if(success != ''){ %>
+                                <p style="text-align: center; color: green;">
+                                    <%= success %>
+                                </p>
+                                <% } %>
+                                    <label for="username" class=" control-label">Category Name</label>
+                                    <div>
+                                        <input style="border-radius: 15px;" type="text " class="form-control " name="passwordCategory" placeholder="Enter your password category Name">
+                                    </div>
+                </div>
+
+                <div>
+                    <button type="submit " name="submit " value="Add Category" class="btn btn-primary " style="border-radius: 25px;">Add Category</button>
+                </div>
+                <p><a href="/passwordCategory">View all category list</a></p>
+
+            </form>
+        </div>
+        <!-- </div> -->
+    </div>
+    <%- include('footer') %>
