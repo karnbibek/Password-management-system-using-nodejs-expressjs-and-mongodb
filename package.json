@@ -1,5 +1,9 @@
 {
   "name": "pms",
+  "engines": {
+    "node": ">=12.16.2",
+    "npm": ">=7.3.0"
+  },
   "version": "0.0.0",
   "private": true,
   "scripts": {
